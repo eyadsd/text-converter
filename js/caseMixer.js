@@ -4,7 +4,7 @@ String.prototype.replaceAt=function(index, char) {
     return a.join("");
 }
 
-function myFunction() {
+function convert_randomly() {
     
     var x = document.getElementById("textarea1");
     var text =  x.value;
@@ -16,5 +16,19 @@ function myFunction() {
             text = text.replaceAt(i, text[i].toUpperCase() )
         }
     }
-    document.getElementById("demo").textContent = text;
+    document.getElementById("new-text").textContent = text;
+  }
+
+  function convert_alternating() {
+    
+    var x = document.getElementById("textarea1");
+    var text =  x.value;
+    for (let i=0 ; i<text.length;i++)
+    {
+        if(i%2!=0)
+        {
+            text = text.replaceAt(i, text[i].toUpperCase() )
+        }
+    }
+    document.getElementById("new-text").textContent = text;
   }
